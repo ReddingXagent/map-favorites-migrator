@@ -1,5 +1,10 @@
 # mfm · 百度 / 高德地图收藏双向迁移
 
+[![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Tests](https://img.shields.io/badge/tests-10%20passed-brightgreen.svg)](#测试)
+[![No API Key](https://img.shields.io/badge/API%20Key-not%20required-success.svg)](#为什么不用-api-key)
+
 把**百度地图**和**高德地图**的「地点收藏」互相搬家。双向、可脱敏、纯本地运行。
 
 > 不依赖任何付费 API。用的是两个网页端自己的登录态接口。
@@ -80,6 +85,17 @@ mfm export --input baidu_redacted.json --format csv --out baidu.csv
 - 手机号、身份证、固话 → `<PHONE>` / `<ID>` / `<TEL>`
 - 门牌号/房号/楼栋 → `<NUM>`
 - 坐标降精度到 0.01°（约 1km）
+
+---
+
+## 测试
+
+```bash
+pip install pytest
+pytest tests/ -q      # 10 passed
+```
+
+覆盖：百度墨卡托精度（6 个真实 POI，阈值 60m）、坐标往返、高德像素转换、脱敏规则、残留自检。
 
 ---
 
