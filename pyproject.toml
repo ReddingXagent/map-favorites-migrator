@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mfm"
+version = "1.0.0"
+description = "Bidirectional map favorites migrator between Baidu Maps and AMap (Gaode)"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "dingxinyou-hue" }]
+keywords = ["baidu-map", "amap", "gaode", "favorites", "migration", "map"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.scripts]
+mfm = "mfm.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

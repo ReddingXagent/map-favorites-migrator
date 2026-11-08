@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+# 真实收藏数据绝不入库
+data/*.json
+data/*.csv
+data/*.js
+!data/.gitkeep
+*.local.json
+scripts/*.js
+.env
